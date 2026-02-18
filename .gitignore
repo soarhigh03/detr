@@ -1,11 +1,10 @@
-# Ignore all datasets
-datasets/*
+# Ignore only CEUS dataset folder
+datasets/ceus_dataset/
+datasets/ceus_dataset_ap_only/
 
-# Re-include folder structure
-!datasets/
-!datasets/ceus_dataset/
+# Keep annotation 
 !datasets/ceus_dataset/annotations/
-!datasets/ceus_dataset/annotations/*.json
+!datasets/ceus_dataset/annotations/**
 
 # Python cache
 __pycache__/
@@ -18,3 +17,6 @@ __pycache__/
 # Logs
 *.log
 outputs/
+
+
+*.zip

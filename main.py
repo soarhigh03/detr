@@ -79,6 +79,13 @@ def get_args_parser():
                         help="Relative classification weight of the no-object class")
 
     # dataset parameters
+    parser.add_argument('--num_classes', default=None, type=int,
+                        help="Number of object classes (max_obj_id + 1). "
+                             "Overrides automatic setting from dataset_file if provided.")
+    parser.add_argument('--ann_train', default=None, type=str,
+                        help="Override train annotation filename inside {coco_path}/annotations/")
+    parser.add_argument('--ann_val', default=None, type=str,
+                        help="Override val annotation filename inside {coco_path}/annotations/")
     parser.add_argument('--dataset_file', default='coco')
     parser.add_argument('--coco_path', type=str)
     parser.add_argument('--coco_panoptic_path', type=str)

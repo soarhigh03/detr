@@ -1,17 +1,20 @@
-.nfs*
-*.ipynb
+# Ignore all datasets
+datasets/*
+
+# Re-include folder structure
+!datasets/
+!datasets/ceus_dataset/
+!datasets/ceus_dataset/annotations/
+!datasets/ceus_dataset/annotations/*.json
+
+# Python cache
+__pycache__/
 *.pyc
-.dumbo.json
-.DS_Store
-.*.swp
+
+# Checkpoints
 *.pth
-**/__pycache__/**
-.ipynb_checkpoints/
-datasets/data/
-experiment-*
-*.tmp
-*.pkl
-**/.mypy_cache/*
-.mypy_cache/*
-not_tracked_dir/
-.vscode
+*.ckpt
+
+# Logs
+*.log
+outputs/
